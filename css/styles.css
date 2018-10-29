@@ -1,0 +1,36 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+form, .bug-container {
+    margin: 0 auto;
+    padding-bottom: 15px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.bug-container {
+    background-color: lightgray;
+
+    padding: 20px;
+    border-radius: 5px;
+}
+
+input, textarea, button {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 100px;
+}
+
+p {
+    margin-top: 0px;
+}
+
+.checkmark-box {
+    margin-top: 20px;
+    font-size: 13px;
+}
