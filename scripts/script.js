@@ -35,31 +35,31 @@ $(document).ready(() => {
                 <label class="completed-text">I have completed this.<label>
             </section>
             `);
-            }
-        };
+        }
+    };
 
-        // when submit button is clicked
-        $(document).on("click", "button", (event) => {
-            let currentdate = new Date();
-            let time = "submitted " + currentdate.getDate() + "/"
-            + (currentdate.getMonth()+1)  + "/" 
-            + currentdate.getFullYear() + " @ "  
-            + currentdate.getHours() + ":"  
-            + currentdate.getMinutes() + ":" 
+    // when submit button is clicked
+    $(document).on("click", "button", (event) => {
+        let currentdate = new Date();
+        let time = "submitted " + currentdate.getDate() + "/"
+            + (currentdate.getMonth() + 1) + "/"
+            + currentdate.getFullYear() + " @ "
+            + currentdate.getHours() + ":"
+            + currentdate.getMinutes() + ":"
             + currentdate.getSeconds();
-            let title = $(".title").val();
-            let description = $(".description").val();
+        let title = $(".title").val();
+        let description = $(".description").val();
 
-            bugsClass.add(new Bugs(title, description, time));
-        });
+        bugsClass.add(new Bugs(title, description, time));
+    });
 
-// when checkmark is clicked
-$(document).on("click", ".checkbox", (event) => {
-    bugsClass.shift();
-});
+    // when checkmark is clicked
+    $(document).on("click", ".checkbox", (event) => {
+        bugsClass.shift();
+    });
 
-const bugsClass = new Bugs();
-bugsClass.display();
+    const bugsClass = new Bugs();
+    bugsClass.display();
 
 });
 
